@@ -1,0 +1,24 @@
+/* ในไฟล์ CSS หรือ Tailwind configuration */
+@keyframes typewriter {
+    0% {
+      width: 0;
+    }
+    100% {
+      width: 100%;
+    }
+  }
+  
+  .animate-typewriter {
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+    width: 0;
+    animation: typewriter 3s steps(30) 1s forwards;
+    
+  }
+
+  .bg-home{
+    background-image: url('../../assets/bg-home.png');
+    background-position: center;
+  }
+  

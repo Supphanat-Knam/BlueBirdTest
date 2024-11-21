@@ -1,0 +1,51 @@
+
+.btn{
+  background-color: rgb(51, 51, 255);  
+}
+
+.menu-wrapper{
+  @apply hidden md:flex items-center space-x-8 h-20
+}
+
+.menu-wrapper:hover > .munu-underline{
+ @apply bg-blue-500
+}
+
+.navbar-wrapper {
+  position: fixed !important;
+  width: 100%;
+  z-index: 10;
+}
+
+/* ---------------------------- navbar animation ---------------------------- */
+
+@media (min-width: 768px) {
+  
+  .navbar-hide {
+    animation: NavHide .5s cubic-bezier(.78,.11,.29,.98) forwards; /* เพิ่ม forwards เพื่อให้ค้างที่สถานะสุดท้าย */
+  }
+  
+  @keyframes NavHide {
+    from {
+      transform: translateY(0); /* เริ่มที่ตำแหน่งปกติ */
+    }
+    to {
+      transform: translateY(-40px); /* เลื่อนขึ้นไปนอกหน้าจอ */
+    }
+  }
+  
+  .navbar-show {
+    animation: NavShow .5s cubic-bezier(.78,.11,.29,.98) forwards; /* เพิ่ม forwards เพื่อให้ค้างที่สถานะสุดท้าย */
+  }
+  
+  @keyframes NavShow {
+    from {
+      transform: translateY(-40px); /* เริ่มที่ตำแหน่งปกติ */
+    }
+    to {
+      transform: translateY(0); /* เลื่อนขึ้นไปนอกหน้าจอ */
+    }
+  }
+
+}
+
